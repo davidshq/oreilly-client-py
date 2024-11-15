@@ -40,9 +40,27 @@ client = OpenSearch(
 # print(response)
 
 """Add a document to the index"""
-document = {
-    "title": "TESTOCP: Testing Adding a Document",
-    "description": "This is a test document to test adding a document to the index."
+# document = {
+#     "title": "TESTOCP: Testing Adding a Document",
+#     "description": "This is a test document to test adding a document to the index."
+# }
+# response = client.index(index=index, body=document)
+# print(response)
+
+"""Delete a document from the index by query"""
+delete_query = {
+    "query": {
+        "match": {
+            "title": "TESTOCP"
+        }
+    }
 }
-response = client.index(index=index, body=document)
-print(response)
+try:
+    response = client.delete_by_query(
+        index=index, 
+        body=delete_query,
+        params={"refresh": "true"}
+    )
+    print(response)
+except Exception as e:
+    print(f"Error deleting document: {e}")
