@@ -14,7 +14,7 @@ client = OpenSearch(
 
 # Show the available indices
 # indices = client.indices.get_alias().keys()
-#print(f"Available indices: {list(indices)}")
+# print(f"Available indices: {list(indices)}")
 
 # Query for a document by term
 query = {
