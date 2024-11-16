@@ -5,4 +5,4 @@ One can download the contents of O'Reilly Learning's library using the [O'Reilly
 
 ## Usage
 - You need to setup valid values in your `.env` file, see the `.env.example` file for more information.
-- Uncomment the code you want to run in `main.py` and run it. Pretty complicated stuff.
+- At the end of the code type the name of the function you want to execute, e.g. `delete_document_by_query()` to execute that query.
