@@ -56,7 +56,7 @@ def add_document():
     """Add a document to the index"""
     document = {
         "title": "TESTOCP: Testing Adding a Document",
-        "description": "This is a test document to test adding a document to the index."
+        "description": "This is a test of adding a document to the index."
     }
     response = client.index(index=index, body=document)
     print(response)
